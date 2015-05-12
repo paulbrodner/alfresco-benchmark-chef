@@ -1,0 +1,9 @@
+
+.data_bag_key
+.idea
+.kitchen/
+
+Berksfile.lock
+
+Gemfile.lock
+.kitchen.local.yml

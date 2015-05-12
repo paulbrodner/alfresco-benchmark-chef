@@ -1,0 +1,29 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-12.04
+    driver:
+      name: vagrant
+      vm_hostname: alfresco-local-test
+      customize:
+          memory: 4096
+      synced_folders:
+        - ["~/Downloads/", "/software", "create: false, disabled: false"]
+      network:
+        - ["forwarded_port", {guest: 8080, host: 9999}]
+    driver_config:
+      username: vagrant
+      password: vagrant
+      hostname: 127.0.0.1:2222
+
+suites:
+  - name: alfresco-node
+    run_list:
+      - recipe[alfresco-benchmark-chef::bash_profile]
+      - recipe[alfresco-benchmark-chef::install_alfresco]
+      - recipe[alfresco-benchmark-chef::restart_alfresco]
