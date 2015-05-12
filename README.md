@@ -5,10 +5,10 @@ This cookbook makes your favorite breakfast sandwich.
 
 Installation
 ------------
-1. Install RVM using the ![official page](https://rvm.io/rvm/install)
-2. Install bundler 
-```gem install bundler```
-3. Install dependencies from the root folder of this project
+1. Install RVM from [official page](https://rvm.io/rvm/install).
+2. Install with rvm, ruby 2.1.5 ```rvm install ruby-2.1.5``` 
+3. Install bundler: ```gem install bundler```
+4. Install dependencies from the root folder of this project
 ```bundle install``` 
 ```berks install```
 
@@ -26,9 +26,9 @@ Attributes
     <th>Description</th>
   </tr>
   <tr>
-    <td><tt>['alfresco-benchmark-chef']['install_alfresco']</tt></td>
+    <td><tt>['install_alfresco']</tt></td>
     <td>Recipe</td>
-    <td>Install alfresco on vagrant machine</td>
+    <td>Install alfresco on a local vagrant machine</td>
   </tr>
 </table>
 
